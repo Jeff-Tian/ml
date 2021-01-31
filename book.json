@@ -11,13 +11,13 @@
   ],
   "pluginsConfig": {
     "github": {
-      "url": "https://github.com/jeff-tian/sicp"
+      "url": "https://github.com/jeff-tian/ml"
     },
     "edit-link": {
-      "base": "https://github.com/jeff-tian/sicp/edit/master",
-      "label": "Edit Page"
+      "base": "https://github.com/jeff-tian/ml/edit/master",
+      "label": "编辑本页"
     }
   },
   "sortedBy": ".",
-  "title": "SICP"
+  "title": "机器学习"
 }

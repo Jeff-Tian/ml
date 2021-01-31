@@ -1,7 +1,7 @@
 {
-  "name": "sicp",
+  "name": "ml",
   "version": "1.0.0",
-  "description": "#### Exercise 1.1: Below is a sequence of expressions. What is the result printed by the interpreter in response to each expression? Assume that the sequence is to be evaluated in the order in which it is presented.",
+  "description": "《机器学习》练习作业",
   "main": "index.js",
   "dependencies": {
     "@jeff-tian/gitbook-plugin-katex": "git+https://github.com/Jeff-Tian/plugin-katex.git#v1.1.9",
@@ -24,12 +24,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jeff-Tian/sicp.git"
+    "url": "git+https://github.com/Jeff-Tian/ml.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Jeff-Tian/sicp/issues"
+    "url": "https://github.com/Jeff-Tian/ml/issues"
   },
-  "homepage": "https://github.com/Jeff-Tian/sicp#readme"
+  "homepage": "https://github.com/Jeff-Tian/ml#readme"
 }

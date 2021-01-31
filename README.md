@@ -1,24 +1,11 @@
-# Introduction
+# 《机器学习》练习作业
 
-> My homework for Structure and Interpretation of Computer Programs
+## 为什么有这个代码库
 
-## Why
+> 凡是我不能创造的，我就还没有理解。
 
-What I cannot create, I don't understand.
+## 一起学习
 
-> My homework for Structure and Interpretation of Computer Programs
-
-## Why
-
-What I cannot create, I don't understand.
-
-## Read the book online
-
-- [PDF](http://web.mit.edu/alexmv/6.037/sicp.pdf)
-- reference https://www.yuque.com/ruanyf/books/csk76x for more formats
-
-## Wechat group
-
-You can add my wechat and I'll let you in.
+欢迎加我微信，一起学习。
 
 ![wechat qr code](wechat.jpeg)
