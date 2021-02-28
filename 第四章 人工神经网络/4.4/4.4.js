@@ -27,9 +27,16 @@ var trainingSetData = LinearUnit.generateTrainingSet(500).map(o => ({
 
 window.trainingSetData = trainingSetData;
 
-
 var trainingSetTrace = {
     ...traceOptions,
+    marker: {
+        size: 2,
+        line: {
+            color: 'green',
+            width: 1.5
+        },
+        opacity: 1
+    },
     x: unpack(trainingSetData, 'x1'), y: unpack(trainingSetData, 'x2'), z: unpack(trainingSetData, 't'),
     name: 'z = x_1 + 2 x_2'
 };
