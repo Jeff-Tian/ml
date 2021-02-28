@@ -42,10 +42,10 @@
     request "^2.69.0"
     to-markdown "^3.1.1"
 
-"@jeff-tian/perceptron@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@jeff-tian/perceptron/-/perceptron-0.0.6.tgz#211d0d06b3ad0a8fef60365c618a6e59a0dd5488"
-  integrity sha512-1Sj/Umz9UCoOTsppPLxFOOFKOdzJQ/A/9nLXXsZzpyYinDQUUUL0qV7+l4BXqEQ9qrzALWIDIUblw2r2f0clPg==
+"@jeff-tian/perceptron@0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@jeff-tian/perceptron/-/perceptron-0.0.8.tgz#eabd652f8926b4042561f20abc9a88d1e8e0efaf"
+  integrity sha512-yvsdMp3I5yOaFZon02QPlf/X9QGdVL1FZYY3WdiThs1WyrOUnq4ByEHo2iNhYU6LqJXm3+GCs39JF6iKOsRIcg==
   dependencies:
     "@types/node" "^11.9.4"
     axios latest

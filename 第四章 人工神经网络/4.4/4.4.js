@@ -3,7 +3,7 @@ function unpack(rows, key) {
 }
 
 function getRandomValue() {
-    return -100 + Math.random() * 200;
+    return -10 + Math.random() * 20;
 }
 
 const traceOptions = {
@@ -19,7 +19,7 @@ const traceOptions = {
     type: 'scatter3d'
 }
 
-var trainingSetData = LinearUnit.generateTrainingSet(500).map(o => ({
+var trainingSetData = LinearUnit.generateTrainingSet(100).map(o => ({
     x1: o.x[0],
     x2: o.x[1],
     t: o.t
@@ -43,8 +43,8 @@ var trainingSetTrace = {
 
 var z0 = {
     type: 'mesh3d',
-    x: [-100, -100, 100, 100],
-    y: [-100, 100, -100, 100],
+    x: [-10, -10, 10, 10],
+    y: [-10, 10, -10, 10],
     z: [0, 0, 0, 0],
     opacity: 0.5,
     color: 'red',

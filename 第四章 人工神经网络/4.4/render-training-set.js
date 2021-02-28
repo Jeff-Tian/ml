@@ -5,6 +5,10 @@ const renderTrainingSet = () => {
     const table = document.createElement('table')
     const head = table.createTHead()
     const headRow = head.insertRow()
+    const noElement = document.createElement("th")
+    const noText = document.createTextNode("序号")
+    noElement.appendChild(noText);
+
     const x1Element = document.createElement('th')
     const x1text = document.createTextNode("x1")
     x1Element.appendChild(x1text)
@@ -21,6 +25,7 @@ const renderTrainingSet = () => {
     const tfText = document.createTextNode("> 2 ?")
     tfElement.appendChild(tfText)
 
+    headRow.appendChild(noElement)
     headRow.appendChild(x1Element)
     headRow.appendChild(x2Element)
     headRow.appendChild(tElement)
@@ -31,6 +36,11 @@ const renderTrainingSet = () => {
     for (var i = 0; i < window.trainingSetData.length; i++) {
         const { x1, x2, t } = window.trainingSetData[i]
         const row = body.insertRow()
+
+        const noCell = document.createElement("td")
+        const no = document.createTextNode(i + 1)
+        noCell.appendChild(no);
+
         const x1Cell = document.createElement('td');
         const x1Data = document.createTextNode(x1)
         x1Cell.appendChild(x1Data)
@@ -47,6 +57,7 @@ const renderTrainingSet = () => {
         const tfData = document.createTextNode(t > 2 ? "T" : "F")
         tfCell.appendChild(tfData);
 
+        row.appendChild(noCell);
         row.appendChild(x1Cell)
         row.appendChild(x2Cell)
         row.appendChild(tCell)

@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@jeff-tian/gitbook-plugin-katex": "git+https://github.com/Jeff-Tian/plugin-katex.git#v1.1.9",
-    "@jeff-tian/perceptron": "^0.0.6",
+    "@jeff-tian/perceptron": "0.0.8",
     "gitbook-plugin-eason-parser": "0.0.7",
     "gitbook-plugin-edit-link": "^2.0.2",
     "gitbook-plugin-github": "^2.0.0",
