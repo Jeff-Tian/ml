@@ -1,7 +1,6 @@
 {
   "plugins": [
     "klipse",
-    "terminull",
     "github",
     "edit-link",
     "eason-parser",
