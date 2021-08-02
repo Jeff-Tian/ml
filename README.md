@@ -17,3 +17,10 @@
 
 <iframe src="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzAxNTk3ODgxNA==&action=getalbum&album_id=1760523821616332802&scene=173&from_msgid=2247484185&from_itemidx=1&count=3&nolastread=1#wechat_redirect" style="width: 100%; min-height: 500px; border: 0;"><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzAxNTk3ODgxNA==&action=getalbum&album_id=1760523821616332802&scene=173&from_msgid=2247484185&from_itemidx=1&count=3&nolastread=1#wechat_redirect">点击跳转</a></iframe>
 
+## 本地运行
+
+```shell
+git clone https://github.com/Jeff-Tian/ml.git
+cd ml
+yarn && yarn start
+```
