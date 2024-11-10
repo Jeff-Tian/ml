@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@jeff-tian/gitbook-plugin-eason-parser':
-        specifier: 1.8.8
-        version: 1.8.8
+        specifier: 1.8.9
+        version: 1.8.9
       '@jeff-tian/gitbook-plugin-katex':
         specifier: 1.1.14
         version: 1.1.14
@@ -93,8 +93,8 @@ packages:
   '@emotion/unitless@0.7.5':
     resolution: {integrity: sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==}
 
-  '@jeff-tian/gitbook-plugin-eason-parser@1.8.8':
-    resolution: {integrity: sha512-X5S4Z5NlDYXsVREQGD5cmPAEEKwG8oHF+stlFaBXBJtlfHKPcLeyE7qLJkVRw/vwnq2Mu/VdC+kAt9PfrQkryA==, tarball: https://npm.pkg.github.com/download/@jeff-tian/gitbook-plugin-eason-parser/1.8.8/8a11a506492f42711446d6c2c71f84bb7390a2af}
+  '@jeff-tian/gitbook-plugin-eason-parser@1.8.9':
+    resolution: {integrity: sha512-9WMFFP+gfQPGsDFFTOCa70EE82r6zduk04HXlyCcGJWgAhSsgPxWW0bx7V+uPLQhaN4uFkCYCH/YvJoIKp6BWA==, tarball: https://npm.pkg.github.com/download/@jeff-tian/gitbook-plugin-eason-parser/1.8.9/829df0543085384323f1cb66363efbf388b6efbb}
     engines: {gitbook: '>=1.8.5'}
 
   '@jeff-tian/gitbook-plugin-katex@1.1.14':
@@ -617,6 +617,9 @@ packages:
 
   minimist@0.0.10:
     resolution: {integrity: sha512-iotkTvxc+TwOm5Ieim8VnSNvCDjCK9S8G3scJ50ZthspSxa7jx50jkhYduuAtAjvfDUwSgOwf8+If99AlOEhyw==}
+
+  'ml@file:':
+    resolution: {directory: '', type: directory}
 
   npm@2.15.12:
     resolution: {integrity: sha512-WMoAJ518W0vHjWy1abYnTeyG9YQpSoYGPxAx7d0C0L7U7Jo44bZsrvTjccmDohCJGxpasdKfqsKsl6o/RUPx6A==}
@@ -1340,9 +1343,15 @@ snapshots:
 
   '@emotion/unitless@0.7.5': {}
 
-  '@jeff-tian/gitbook-plugin-eason-parser@1.8.8':
+  '@jeff-tian/gitbook-plugin-eason-parser@1.8.9':
     dependencies:
+      '@jeff-tian/gitbook-plugin-eason-parser': 'ml@file:'
       eason-parser: 1.8.8
+    transitivePeerDependencies:
+      - date-fns
+      - debug
+      - luxon
+      - moment
 
   '@jeff-tian/gitbook-plugin-katex@1.1.14':
     dependencies:
@@ -1991,6 +2000,23 @@ snapshots:
       brace-expansion: 2.0.1
 
   minimist@0.0.10: {}
+
+  'ml@file:':
+    dependencies:
+      '@jeff-tian/gitbook-plugin-eason-parser': 1.8.9
+      '@jeff-tian/gitbook-plugin-katex': 1.1.14
+      '@jeff-tian/gitbook-plugin-theme-jeff-tian': 1.2.10
+      '@jeff-tian/perceptron': 0.1.1
+      gitbook-plugin-edit-link: 2.0.2
+      gitbook-plugin-github: 2.0.0
+      gitbook-plugin-klipse: 1.2.0
+      gitbook-plugin-terminull: 1.0.5
+      plotly.js-dist: 1.58.5
+    transitivePeerDependencies:
+      - date-fns
+      - debug
+      - luxon
+      - moment
 
   npm@2.15.12: {}
 
