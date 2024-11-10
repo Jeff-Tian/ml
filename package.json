@@ -22,7 +22,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gitbook install && npm install && book sm && gitbook build",
     "start": "npm run build && gitbook serve",
-    "restart": "gitbook serve"
+    "restart": "gitbook serve",
+    "postinstall": "node postinstall.js"
   },
   "repository": {
     "type": "git",
