@@ -6,7 +6,7 @@
   "dependencies": {
     "@jeff-tian/gitbook-plugin-katex": "1.1.14",
     "@jeff-tian/perceptron": "0.1.1",
-    "@jeff-tian/gitbook-plugin-eason-parser": "1.8.8",
+    "@jeff-tian/gitbook-plugin-eason-parser": "1.8.9",
     "gitbook-plugin-edit-link": "^2.0.2",
     "gitbook-plugin-github": "^2.0.0",
     "gitbook-plugin-klipse": "^1.2.0",

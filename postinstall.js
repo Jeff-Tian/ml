@@ -1,8 +1,10 @@
 const fs = require('fs');
 
-const filePath = 'node_modules/npm/node_modules/graceful-fs/polyfills.js';
+const filePath1 = 'node_modules/npm/node_modules/graceful-fs/polyfills.js';
 
-fs.readFile(filePath, 'utf8', (err, data) => {
+const filePath2 = 'node_modules/.pnpm/npm@5.1.0/node_modules/npm/node_modules/graceful-fs/polyfills.js'
+
+const replaceInFile = filePath => fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) {
         console.error(err);
         return;
@@ -29,6 +31,9 @@ fs.readFile(filePath, 'utf8', (err, data) => {
             return;
         }
 
-        console.log('File modified successfully!');
+        console.log(`File ${filePath} modified successfully!`);
     });
 });
+
+// replaceInFile(filePath);
+replaceInFile(filePath2);
