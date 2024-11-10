@@ -3,10 +3,8 @@
     "klipse",
     "github",
     "edit-link",
-    "eason-parser@node_modules/@jeff-tian/gitbook-plugin-eason-parser",
-    "katex@git+https://github.com/Jeff-Tian/plugin-katex#v1.1.9",
     "-theme-default",
-    "theme-jeff-tian@1.0.9"
+    "theme-jeff-tian@node_modules/@jeff-tian/gitbook-plugin-theme-jeff-tian"
   ],
   "pluginsConfig": {
     "github": {

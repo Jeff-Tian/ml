@@ -29,11 +29,11 @@ const replaceInFile = filePath => fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
             console.error(err);
             return;
-            
+
         }
         console.log(`File ${filePath} modified successfully!`);
     });
 });
 
-replaceInFile(filePath);
+replaceInFile(filePath1);
 replaceInFile(filePath2);
