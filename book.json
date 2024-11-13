@@ -1,12 +1,13 @@
 {
+  "gitbook": "3.2.4",
   "plugins": [
     "klipse",
     "github",
     "edit-link",
     "eason-parser",
-    "katex@git+https://github.com/Jeff-Tian/plugin-katex#v1.1.9",
+    "katex",
     "-theme-default",
-    "theme-jeff-tian@1.0.9"
+    "theme-jeff-tian"
   ],
   "pluginsConfig": {
     "github": {

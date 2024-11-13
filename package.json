@@ -5,14 +5,15 @@
   "main": "index.js",
   "dependencies": {
     "@jeff-tian/gitbook-plugin-katex": "1.1.14",
-    "@jeff-tian/perceptron": "0.0.8",
+    
     "@jeff-tian/gitbook-plugin-eason-parser": "1.8.9",
     "gitbook-plugin-edit-link": "^2.0.2",
     "gitbook-plugin-github": "^2.0.0",
     "gitbook-plugin-klipse": "^1.2.0",
     "gitbook-plugin-terminull": "1.0.5",
     "@jeff-tian/gitbook-plugin-theme-jeff-tian": "^1.2.10",
-    "plotly.js-dist": "^1.58.4"
+    "plotly.js-dist": "^1.58.4",
+    "@jeff-tian/gitbook": "3.2.4"
   },
   "devDependencies": {
     "@jeff-tian/gitbook-cli": "2.3.2",
