@@ -1,22 +1,22 @@
 {
   "name": "ml",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "《机器学习》练习作业",
   "main": "index.js",
   "dependencies": {
-    "@jeff-tian/gitbook-plugin-katex": "git+https://github.com/Jeff-Tian/plugin-katex.git#v1.1.9",
+    "@jeff-tian/gitbook-plugin-katex": "1.1.14",
     "@jeff-tian/perceptron": "0.0.8",
-    "gitbook-plugin-eason-parser": "0.0.7",
+    "@jeff-tian/gitbook-plugin-eason-parser": "1.8.9",
     "gitbook-plugin-edit-link": "^2.0.2",
     "gitbook-plugin-github": "^2.0.0",
     "gitbook-plugin-klipse": "^1.2.0",
     "gitbook-plugin-terminull": "1.0.5",
-    "gitbook-plugin-theme-jeff-tian": "^1.0.9",
+    "@jeff-tian/gitbook-plugin-theme-jeff-tian": "^1.2.10",
     "plotly.js-dist": "^1.58.4"
   },
   "devDependencies": {
-    "@jeff-tian/gitbook-cli": "2.3.8",
-    "@jeff-tian/gitbook-summary": "1.2.6"
+    "@jeff-tian/gitbook-cli": "2.3.2",
+    "@jeff-tian/gitbook-summary": "1.2.7"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
