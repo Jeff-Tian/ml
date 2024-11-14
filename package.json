@@ -22,7 +22,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gitbook install && npm install && book sm && gitbook build",
-    "start": "npm run build && gitbook serve",
+    "start": "NODE_OPTIONS=\"--max-old-space-size=16384\" npm run build && NODE_OPTIONS=\"--max-old-space-size=16384\" gitbook serve",
     "restart": "gitbook serve",
     "postinstall": "node postinstall.js"
   },
