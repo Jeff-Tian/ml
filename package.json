@@ -4,7 +4,6 @@
   "description": "《机器学习》练习作业",
   "main": "index.js",
   "dependencies": {
-    "@jeff-tian/gitbook": "3.2.4",
     "@jeff-tian/gitbook-plugin-eason-parser": "1.8.9",
     "@jeff-tian/gitbook-plugin-katex": "1.1.14",
     "@jeff-tian/gitbook-plugin-theme-jeff-tian": "^1.2.10",
