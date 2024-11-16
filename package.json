@@ -4,10 +4,10 @@
   "description": "《机器学习》练习作业",
   "main": "index.js",
   "dependencies": {
-    "@jeff-tian/gitbook-plugin-eason-parser": "1.8.9",
     "@jeff-tian/gitbook-plugin-katex": "1.1.14",
     "@jeff-tian/gitbook-plugin-theme-jeff-tian": "^1.2.10",
     "cross-env": "^7.0.3",
+    "extend": "^3.0.2",
     "gitbook-plugin-edit-link": "^2.0.2",
     "gitbook-plugin-github": "^2.0.0",
     "gitbook-plugin-klipse": "^1.2.0",
