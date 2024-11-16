@@ -4,10 +4,7 @@
     "klipse",
     "github",
     "edit-link",
-    "eason-parser",
-    "katex",
-    "-theme-default",
-    "theme-jeff-tian"
+    "-theme-default"
   ],
   "pluginsConfig": {
     "github": {
