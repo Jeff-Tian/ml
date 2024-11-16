@@ -4,16 +4,16 @@
   "description": "《机器学习》练习作业",
   "main": "index.js",
   "dependencies": {
-    "@jeff-tian/gitbook-plugin-katex": "1.1.14",
-    
+    "@jeff-tian/gitbook": "3.2.4",
     "@jeff-tian/gitbook-plugin-eason-parser": "1.8.9",
+    "@jeff-tian/gitbook-plugin-katex": "1.1.14",
+    "@jeff-tian/gitbook-plugin-theme-jeff-tian": "^1.2.10",
+    "cross-env": "^7.0.3",
     "gitbook-plugin-edit-link": "^2.0.2",
     "gitbook-plugin-github": "^2.0.0",
     "gitbook-plugin-klipse": "^1.2.0",
     "gitbook-plugin-terminull": "1.0.5",
-    "@jeff-tian/gitbook-plugin-theme-jeff-tian": "^1.2.10",
-    "plotly.js-dist": "^1.58.4",
-    "@jeff-tian/gitbook": "3.2.4"
+    "plotly.js-dist": "^1.58.4"
   },
   "devDependencies": {
     "@jeff-tian/gitbook-cli": "2.3.2",
@@ -22,7 +22,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gitbook install && npm install && book sm && gitbook build",
-    "start": "NODE_OPTIONS=\"--max-old-space-size=16384\" npm run build && NODE_OPTIONS=\"--max-old-space-size=16384\" gitbook serve",
+    "start": "cross-env NODE_OPTIONS=\"--max-old-space-size=16384\" npm run build && cross-env NODE_OPTIONS=\"--max-old-space-size=16384\" gitbook serve",
     "restart": "gitbook serve",
     "postinstall": "node postinstall.js"
   },
