@@ -1,0 +1,9 @@
+{
+    "name": "My Codespace",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+        "node": {
+            "version": "14"
+        }
+    }
+}
