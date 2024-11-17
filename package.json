@@ -4,8 +4,6 @@
   "description": "《机器学习》练习作业",
   "main": "index.js",
   "dependencies": {
-    "@jeff-tian/gitbook-plugin-katex": "1.1.14",
-    "@jeff-tian/gitbook-plugin-theme-jeff-tian": "^1.2.10",
     "cross-env": "^7.0.3",
     "extend": "^3.0.2",
     "gitbook-plugin-edit-link": "^2.0.2",
@@ -15,7 +13,7 @@
     "plotly.js-dist": "^1.58.4"
   },
   "devDependencies": {
-    "@jeff-tian/gitbook-cli": "2.3.2",
+    "gitbook-cli": "2.3.2",
     "@jeff-tian/gitbook-summary": "1.2.7"
   },
   "scripts": {

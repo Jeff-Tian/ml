@@ -1,10 +1,9 @@
 {
-  "gitbook": "3.3.0",
+  "gitbook": "3.2.3",
   "plugins": [
     "klipse",
     "github",
-    "edit-link",
-    "-theme-default"
+    "edit-link"
   ],
   "pluginsConfig": {
     "github": {
