@@ -2,3 +2,5 @@ node_modules
 _book
 .idea
 # SUMMARY.md
+public
+.cache

@@ -1,38 +1,40 @@
 {
-  "name": "ml",
-  "version": "1.0.1",
-  "description": "《机器学习》练习作业",
-  "main": "index.js",
+  "name": "gatsby-starter-default",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "version": "0.1.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "@jeff-tian/gitbook-plugin-katex": "1.1.14",
-    "@jeff-tian/gitbook-plugin-theme-jeff-tian": "^1.2.10",
-    "cross-env": "^7.0.3",
-    "extend": "^3.0.2",
-    "gitbook-plugin-edit-link": "^2.0.2",
-    "gitbook-plugin-github": "^2.0.0",
-    "gitbook-plugin-klipse": "^1.2.0",
-    "gitbook-plugin-terminull": "1.0.5",
-    "plotly.js-dist": "^1.58.4"
+    "gatsby": "^5.14.0",
+    "gatsby-plugin-image": "^3.14.0",
+    "gatsby-plugin-manifest": "^5.14.0",
+    "gatsby-plugin-sharp": "^5.14.0",
+    "gatsby-source-filesystem": "^5.14.0",
+    "gatsby-transformer-sharp": "^5.14.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@jeff-tian/gitbook-cli": "2.3.2",
-    "@jeff-tian/gitbook-summary": "1.2.7"
+    "prettier": "^2.8.8"
   },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "0BSD",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gitbook install && npm install && book sm && gitbook build",
-    "start": "cross-env NODE_OPTIONS=\"--max-old-space-size=16384\" npm run build && cross-env NODE_OPTIONS=\"--max-old-space-size=16384\" gitbook serve",
-    "restart": "gitbook serve",
-    "postinstall": "node postinstall.js"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jeff-Tian/ml.git"
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
-  "author": "",
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Jeff-Tian/ml/issues"
-  },
-  "homepage": "https://github.com/Jeff-Tian/ml#readme"
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
 }
