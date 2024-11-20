@@ -1,3 +1,5 @@
+console.log('in 4.4!')
+
 function unpack(rows, key) {
     return rows.map(function (row) { return row[key]; });
 }
@@ -117,3 +119,5 @@ var layout = {
 };
 
 Plotly.newPlot('myDiv', data, layout);
+
+console.log('hello!');

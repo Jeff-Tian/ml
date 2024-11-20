@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import { DangrousElement } from "../components/dangerous-element"
 
 const Post = ({ data }) => {
     const post = data.markdownRemark
@@ -9,7 +10,7 @@ const Post = ({ data }) => {
     return (
         <Layout>
             <div>
-                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                <DangrousElement markup={post.html} />
             </div>
         </Layout>
     )
