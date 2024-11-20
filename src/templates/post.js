@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import { DangrousElement } from "../components/dangerous-element"
-
+import katex from 'katex';
 require(`katex/dist/katex.min.css`)
 
 const Post = ({ data }) => {
@@ -12,7 +12,7 @@ const Post = ({ data }) => {
     return (
         <Layout>
             <div>
-                <DangrousElement markup={post.html} />
+                <DangrousElement markup={post.html} katex={katex} />
             </div>
         </Layout>
     )

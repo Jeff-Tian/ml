@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 
-export function DangrousElement({ markup }) {
+export function DangrousElement({ markup, katex }) {
     const elRef = useRef(null);
 
     useEffect(() => {
         if (!elRef.current) return;
+
+        window.katex = katex;
 
         // Extract and clear the inner HTML
         const container = document.createElement('div');
