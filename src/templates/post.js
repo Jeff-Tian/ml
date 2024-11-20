@@ -4,6 +4,8 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { DangrousElement } from "../components/dangerous-element"
 
+require(`katex/dist/katex.min.css`)
+
 const Post = ({ data }) => {
     const post = data.markdownRemark
 
