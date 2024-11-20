@@ -1,22 +1,59 @@
-import React, { useLayoutEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 export function DangrousElement({ markup }) {
-    const elRef = useRef ();
-    const hasFiredRef = useRef (false);
+    const elRef = useRef(null);
 
-    useLayoutEffect(() => {
-        // if (hasFiredRef.current) return;
+    useEffect(() => {
         if (!elRef.current) return;
 
-        const range = document.createRange();
-        range.selectNode(elRef.current);
-        const documentFragment = range.createContextualFragment(markup);
+        // Extract and clear the inner HTML
+        const container = document.createElement('div');
+        container.innerHTML = markup;
 
-        elRef.current.innerHTML = '';
-        elRef.current.append(documentFragment);
+        // Collect script elements and their sources
+        const scripts = Array.from(container.querySelectorAll('script'));
+        const scriptQueue = scripts.map((script) => ({
+            src: script.src || null,
+            content: script.innerHTML,
+            async: script.async,
+            defer: script.defer,
+        }));
 
-        hasFiredRef.current = true;
+        // Remove script tags from the container
+        scripts.forEach((script) => script.remove());
+
+        // Inject the rest of the HTML into the container
+        elRef.current.innerHTML = container.innerHTML;
+
+        // Helper to load scripts sequentially
+        const loadScript = async (scriptData) => {
+            return new Promise((resolve, reject) => {
+                const script = document.createElement('script');
+                if (scriptData.src) {
+                    script.src = scriptData.src;
+                    script.async = false; // Force sequential loading
+                    script.defer = false;
+                    script.onload = resolve;
+                    script.onerror = reject;
+                } else {
+                    script.innerHTML = scriptData.content;
+                    resolve();
+                }
+                elRef.current.appendChild(script);
+            });
+        };
+
+        // Sequentially load scripts
+        (async () => {
+            for (const scriptData of scriptQueue) {
+                try {
+                    await loadScript(scriptData);
+                } catch (error) {
+                    console.error('Error loading script:', scriptData.src || scriptData.content, error);
+                }
+            }
+        })();
     }, [markup]);
 
-    return <div ref={elRef} dangerouslySetInnerHTML={{ __html: markup }}></div>;
+    return <div ref={elRef}></div>;
 }
