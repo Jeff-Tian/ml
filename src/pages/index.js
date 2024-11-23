@@ -89,7 +89,9 @@ const IndexPage = ({data}) => (
             {data.allMarkdownRemark.edges.map(({node}) => (
                 <div key={node.id}>
                     <h3>
-                        {node.excerpt}{" "}
+                        <Link to={`${node.fields.slug}`}>
+                            {node.fields.slug}
+                        </Link>
                     </h3>
                     <p>{node.excerpt}</p>
                 </div>
@@ -134,6 +136,9 @@ export const query = graphql`
             totalCount
             edges {
                 node {
+                    fields {
+                        slug
+                    }
                     wordCount {
                         paragraphs
                         sentences
