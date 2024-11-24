@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, {useEffect, useRef} from 'react';
 
-export function DangrousElement({ markup, katex }) {
+export function DangrousElement({markup, katex}) {
     const elRef = useRef(null);
 
     useEffect(() => {
@@ -55,7 +55,7 @@ export function DangrousElement({ markup, katex }) {
                 }
             }
         })();
-    }, [markup]);
+    }, [markup, katex]);
 
     return <div ref={elRef}></div>;
 }
