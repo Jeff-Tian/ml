@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "ml",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "《机器学习》作业",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jeff Tian <jeff.tian@outlook.com>",
   "dependencies": {
     "gatsby": "^5.14.0",
     "gatsby-plugin-image": "^3.14.0",
