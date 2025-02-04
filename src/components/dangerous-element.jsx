@@ -19,6 +19,7 @@ export function DangrousElement({markup, katex}) {
             content: script.innerHTML,
             async: script.async,
             defer: script.defer,
+            'data-element-id': script.getAttribute('data-element-id'),
         }));
 
         // Remove script tags from the container
@@ -29,6 +30,7 @@ export function DangrousElement({markup, katex}) {
 
         // Helper to load scripts sequentially
         const loadScript = async (scriptData) => {
+            console.log('loading ', scriptData);
             return new Promise((resolve, reject) => {
                 const script = document.createElement('script');
                 if (scriptData.src) {
@@ -37,6 +39,7 @@ export function DangrousElement({markup, katex}) {
                     script.defer = false;
                     script.onload = resolve;
                     script.onerror = reject;
+                    script['data-element-id'] = scriptData['data-element-id'];
                 } else {
                     script.innerHTML = scriptData.content;
                     resolve();
