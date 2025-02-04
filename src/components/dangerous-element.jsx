@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 
-export function DangrousElement({markup, katex}) {
+export function DangerousElement({markup, katex}) {
     const elRef = useRef(null);
 
     useEffect(() => {
@@ -39,11 +39,11 @@ export function DangrousElement({markup, katex}) {
                     script.defer = false;
                     script.onload = resolve;
                     script.onerror = reject;
-                    script['data-element-id'] = scriptData['data-element-id'];
                 } else {
                     script.innerHTML = scriptData.content;
                     resolve();
                 }
+                script.setAttribute("data-element-id", scriptData['data-element-id']);
                 elRef.current.appendChild(script);
             });
         };
