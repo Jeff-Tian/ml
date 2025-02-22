@@ -8,6 +8,7 @@ project:
   # authors: []
   github: https://github.com/Jeff-Tian/ml
   # To autogenerate a Table of Contents, run "myst init --write-toc"
+  jupyter: true
 site:
   template: book-theme
   # options:
