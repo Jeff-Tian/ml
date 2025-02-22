@@ -4,3 +4,6 @@ _book
 # SUMMARY.md
 public
 .cache
+
+# MyST build outputs
+_build
