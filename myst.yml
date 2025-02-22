@@ -13,3 +13,5 @@ site:
   # options:
   #   favicon: favicon.ico
   #   logo: site_logo.png
+  domains:
+    - username.curve.space
