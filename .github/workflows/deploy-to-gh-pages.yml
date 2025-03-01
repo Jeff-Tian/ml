@@ -39,7 +39,7 @@ jobs:
       - name: Build HTML Assets
         run: myst build --html
       - name: cname
-        run: echo 'zero.ml.jiwai.win' > ./_build/html/CNAME
+        run: echo 'zero-ml.jiwai.win' > ./_build/html/CNAME
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
