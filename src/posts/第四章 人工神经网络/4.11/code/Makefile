@@ -24,3 +24,6 @@ backprop_initr.o: backprop.c backprop.h
 backprop_init0.o: backprop.c backprop.h
 	$(CC) ${CFLAGS} -c -DINITZERO backprop.c
 	mv backprop.o backprop_init0.o
+
+clean:
+	rm -f *.o facetrain facetrain_init0 hidtopgm outtopgm

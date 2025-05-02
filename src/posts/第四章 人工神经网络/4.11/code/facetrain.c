@@ -11,6 +11,7 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h> // for atoi, exit
 #include <math.h>
 #include <pgmimage.h>
 #include <backprop.h>
@@ -18,7 +19,15 @@
 extern char *strcpy();
 extern void exit();
 
-main(argc, argv)
+// Function prototypes
+void printusage(const char *prog);
+void backprop_face(IMAGELIST *trainlist, IMAGELIST *test1list, IMAGELIST *test2list, int epochs, int savedelta, char *netname, int list_errors);
+int performance_on_imagelist(BPNN *net, IMAGELIST *il, int list_errors);
+int evaluate_performance(BPNN *net, double *err);
+void load_input_with_image(IMAGE *img, BPNN *net);
+void load_target(IMAGE *img, BPNN *net);
+
+int main(argc, argv)
 int argc;
 char *argv[];
 {
@@ -47,7 +56,7 @@ char *argv[];
 
     /*** Parse switches ***/
     if (argv[ind][0] == '-') {
-      switch (argv[ind][1]) {  
+      switch (argv[ind][1]) {
         case 'n': strcpy(netname, argv[++ind]);
                   break;
         case 'e': epochs = atoi(argv[++ind]);
@@ -73,9 +82,9 @@ char *argv[];
 
   /*** If any train, test1, or test2 sets have been specified, then
        load them in. ***/
-  if (trainname[0] != '\0') 
+  if (trainname[0] != '\0')
     imgl_load_images_from_textfile(trainlist, trainname);
-  if (test1name[0] != '\0') 
+  if (test1name[0] != '\0')
     imgl_load_images_from_textfile(test1list, test1name);
   if (test2name[0] != '\0')
     imgl_load_images_from_textfile(test2list, test2name);
@@ -108,7 +117,7 @@ char *argv[];
 }
 
 
-backprop_face(trainlist, test1list, test2list, epochs, savedelta, netname,
+void backprop_face(trainlist, test1list, test2list, epochs, savedelta, netname,
 	      list_errors)
 IMAGELIST *trainlist, *test1list, *test2list;
 int epochs, savedelta, list_errors;
@@ -204,7 +213,7 @@ char *netname;
 /*** Computes the performance of a net on the images in the imagelist. ***/
 /*** Prints out the percentage correct on the image set, and the
      average error between the target and the output units for the set. ***/
-performance_on_imagelist(net, il, list_errors)
+int performance_on_imagelist(net, il, list_errors)
 BPNN *net;
 IMAGELIST *il;
 int list_errors;
@@ -228,7 +237,7 @@ int list_errors;
       load_target(il->list[i], net);
 
       /*** See if it got it right. ***/
-      if (evaluate_performance(net, &val, 0)) {
+      if (evaluate_performance(net, &val)) {
         correct++;
       } else if (list_errors) {
 	printf("%s - outputs ", NAME(il->list[i]));
@@ -254,7 +263,7 @@ int list_errors;
   }
 }
 
-evaluate_performance(net, err)
+int evaluate_performance(net, err)
 BPNN *net;
 double *err;
 {
@@ -293,7 +302,7 @@ double *err;
 
 
 
-printusage(prog)
+void printusage(prog)
 char *prog;
 {
   printf("USAGE: %s\n", prog);

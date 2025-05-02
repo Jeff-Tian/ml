@@ -8,11 +8,15 @@
  */
 
 #include <stdio.h>
+#include <string.h>
 #include <pgmimage.h>
+#include <stdlib.h>
 
-extern char *malloc();
-extern char *realloc();
-extern char *strcpy();
+// extern char *malloc();
+// extern char *realloc();
+// extern char *strcpy();
+
+void imgl_munge_name(char *buf);
 
 char *img_basename(filename)
 char *filename;
@@ -314,7 +318,7 @@ char *filename;
 }
 
 
-imgl_munge_name(buf)
+void imgl_munge_name(buf)
 char *buf;
 {
   int j;

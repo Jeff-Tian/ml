@@ -8,6 +8,8 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <pgmimage.h>
 #include <backprop.h>
 
@@ -17,13 +19,15 @@ extern void exit();
 #define TARGET_LOW 0.1
 
 
+void load_target(IMAGE *img, BPNN *net);
+
 /*** This is the target output encoding for a network with one output unit.
      It scans the image name, and if it's an image of me (js) then
      it sets the target unit to HIGH; otherwise it sets it to LOW.
      Remember, units are indexed starting at 1, so target unit 1
      is the one to change....  ***/
 
-load_target(img, net)
+void load_target(img, net)
 IMAGE *img;
 BPNN *net;
 {
@@ -48,7 +52,7 @@ BPNN *net;
 /********* You shouldn't need to change any of the code below.   *******/
 /***********************************************************************/
 
-load_input_with_image(img, net)
+void load_input_with_image(img, net)
 IMAGE *img;
 BPNN *net;
 {

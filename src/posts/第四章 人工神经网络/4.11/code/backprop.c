@@ -7,7 +7,11 @@
  ******************************************************************
  */
 
+#include <stdlib.h>
+#include <unistd.h>
+#include <fcntl.h>
 #include <stdio.h>
+#include <string.h>
 #include <backprop.h>
 #include <math.h>
 
@@ -82,7 +86,7 @@ int m, n;
 }
 
 
-bpnn_randomize_weights(w, m, n)
+void bpnn_randomize_weights(w, m, n)
 double **w;
 int m, n;
 {
@@ -96,7 +100,7 @@ int m, n;
 }
 
 
-bpnn_zero_weights(w, m, n)
+void bpnn_zero_weights(w, m, n)
 double **w;
 int m, n;
 {
@@ -110,7 +114,7 @@ int m, n;
 }
 
 
-void bpnn_initialize(seed)
+void bpnn_initialize(int seed)
 {
   printf("Random number generator seed: %d\n", seed);
   srandom(seed);
@@ -278,6 +282,7 @@ int nh, no;
 
 
 void bpnn_adjust_weights(delta, ndelta, ly, nly, w, oldw, eta, momentum)
+int ndelta, nly;
 double *delta, *ly, **w, **oldw, eta, momentum;
 {
   double new_dw;
