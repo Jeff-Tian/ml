@@ -1,0 +1,13 @@
+# 所有文本文件默认使用 LF 换行符
+
+* text=auto eol=lf
+
+# 排除 .bat 文件，强制使用 CRLF
+
+*.bat text eol=crlf
+
+# 明确标记二进制文件不处理（可选）
+
+*.png binary
+
+*.jpg binary
