@@ -149,7 +149,7 @@ char *netname;
 
   if (epochs > 0) {
     printf("Training underway (going to %d epochs)\n", epochs);
-    printf("Will save network every %d epochs\n", savedelta);
+    printf("Will save network every %d epochs\n<epoch> <delta> <trainperf> <trainerr> <t1perf> <t1err> <t2perf> <t2err>\n", savedelta);
     fflush(stdout);
   }
 
