@@ -7,6 +7,7 @@
   "dependencies": {
     "@jeff-tian/perceptron": "^0.1.1",
     "@stackblitz/sdk": "^1.11.0",
+    "electron": "^36.1.0",
     "gatsby": "^5.14.0",
     "gatsby-plugin-image": "^3.14.0",
     "gatsby-plugin-manifest": "^5.14.0",
