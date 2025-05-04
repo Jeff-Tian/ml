@@ -1,2 +1,2 @@
 /4.11/4_11.pdf
-    X-Frame-Options: ALLOWALL
+    X-Frame-Options: ALLOW-FROM https://ml.jiwai.com
