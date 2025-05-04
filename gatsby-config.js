@@ -9,10 +9,10 @@
  */
 module.exports = {
     siteMetadata: {
-        title: `Gatsby Default Starter`,
-        description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-        author: `@gatsbyjs`,
-        siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+        title: `Tom M. Mitchell 著《机器学习》之作业练习`,
+        description: `自学《机器学习》之作业练习`,
+        author: `@zizhujy`,
+        siteUrl: `https://ml.jiwai.win/`,
     },
     plugins: [
         {
