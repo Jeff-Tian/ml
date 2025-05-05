@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - gatsby
+  pull_request:
+    branches:
+      - gatsby
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.2.2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22' # 或者你项目所需的 Node.js 版本
+
+      - name: Install dependencies
+        run: |
+          yarn install # 如果你使用 yarn，可以改为 yarn install
+
+      - name: Run tests
+        run: |
+          yarn test # 如果你使用 yarn，可以改为 yarn test
