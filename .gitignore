@@ -7,3 +7,8 @@ public
 
 # MyST build outputs
 _build
+
+# Local Netlify folder
+.netlify
+
+yarn-error.log

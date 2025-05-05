@@ -88,6 +88,15 @@ module.exports = {
                     `./src`,
                 ]
             }
+        },
+        {
+            resolve: 'gatsby-plugin-netlify', options: {
+                headers: {
+                    '/4.11/4_11.pdf': [
+                        'X-Frame-Options: ALLOW-FROM https://ml.jiwai.win',
+                    ]
+                }
+            }
         }
     ],
 }
