@@ -15,4 +15,5 @@ module.exports = {
         url: `http://localhost`,
     },
     setupFiles: [`<rootDir>/loadershim.js`],
+    modulePathIgnorePatterns: ['.cache', 'public',]
 }
