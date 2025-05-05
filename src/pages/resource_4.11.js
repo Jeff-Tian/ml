@@ -7,7 +7,7 @@ import {graphql} from "gatsby";
 export const Head = () => <Seo title="《机器学习》第 4 章 4.11 题目资源"/>
 
 
-const Tree = ({data}) => {
+export const Tree = ({data}) => {
     // 将查询出来的文件，以目录浏览的方式展示：
     // 1. 先将文件按目录分组
     // 2. 再将每个目录下的文件按名称排序
@@ -29,7 +29,6 @@ const Tree = ({data}) => {
 
     return (
         <div>
-            <h1>第四章 人工神经网络</h1>
             {Object.keys(sortedGroupedFiles).map((dir) => (
                 <div key={dir}>
                     <h2>{dir}</h2>
