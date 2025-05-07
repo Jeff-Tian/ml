@@ -12,3 +12,5 @@ _build
 .netlify
 
 yarn-error.log
+.o
+facetrain
