@@ -89,15 +89,20 @@ module.exports = {
         ]
       }
     },
+  ],
+  headers: [
     {
-      resolve: "gatsby-plugin-netlify", options: {
-        headers: {
-          "/4.11/4_11.pdf": [
-            "X-Frame-Options: ALLOW-FROM https://ml.jiwai.win",
-            "Content-Security-Policy: frame-ancestors https://ml.jiwai.win"
-          ]
+      "source": "/4.11/4_11.pdf",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "ALLOW-FROM https://ml.jiwai.win"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "frame-ancestors https://ml.jiwai.win"
         }
-      }
+      ]
     }
   ]
 }
