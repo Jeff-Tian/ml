@@ -1,6 +1,5 @@
 import {render} from '@testing-library/react';
 import {Tree} from "../../src/pages/resource_4.11";
-import {expect} from "playwright/test";
 
 describe('tests for resource 4.11', () => {
     describe('tree', () => {
