@@ -34,3 +34,12 @@ backprop_init0.o: backprop.c backprop.h
 
 clean:
 	rm -f *.o facetrain facetrain_init0 hidtopgm outtopgm
+
+# 测试相关目标
+test: test_imagenet
+	./test_imagenet
+
+test_imagenet: tests/test_imagenet.c imagenet.o pgmimage.o backprop.o tests/unity/unity.c
+	gcc -o test_imagenet tests/test_imagenet.c imagenet.o pgmimage.o backprop.o tests/unity/unity.c -I. -I./tests/unity
+
+.PHONY: test

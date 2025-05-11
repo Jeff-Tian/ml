@@ -12,6 +12,6 @@ _build
 .netlify
 
 yarn-error.log
-.o
+**/*.o
 facetrain
 .exe
