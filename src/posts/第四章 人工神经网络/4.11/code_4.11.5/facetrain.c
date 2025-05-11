@@ -303,7 +303,7 @@ double *err;
 
 
 void printusage(prog)
-char *prog;
+const char *prog;
 {
   printf("USAGE: %s\n", prog);
   printf("       -n <network file>\n");

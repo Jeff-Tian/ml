@@ -1,5 +1,12 @@
+CC=gcc
 CFLAGS=-g -I.
 LFLAGS=
+
+ifeq ($(OS),Windows_NT)
+  MV = move
+else
+  MV = mv
+endif
 
 facetrain: facetrain.o imagenet.o backprop_initr.o pgmimage.o
 	$(CC) ${LFLAGS} facetrain.o imagenet.o backprop_initr.o pgmimage.o \
@@ -19,11 +26,11 @@ facetrain_init0: facetrain.o imagenet.o backprop_init0.o pgmimage.o
 
 backprop_initr.o: backprop.c backprop.h
 	$(CC) ${CFLAGS} -c backprop.c
-	mv backprop.o backprop_initr.o
+	$(MV) backprop.o backprop_initr.o
 
 backprop_init0.o: backprop.c backprop.h
 	$(CC) ${CFLAGS} -c -DINITZERO backprop.c
-	mv backprop.o backprop_init0.o
+	$(MV) backprop.o backprop_init0.o
 
 clean:
 	rm -f *.o facetrain facetrain_init0 hidtopgm outtopgm

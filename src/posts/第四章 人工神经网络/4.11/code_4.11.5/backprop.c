@@ -27,6 +27,12 @@
   for (_i = 0; _i < _l; _i++) *_to++ = *_from++;\
 }
 
+#ifdef _WIN32
+  #define random rand
+  #define srandom srand
+  #define BIGRND RAND_MAX
+#endif
+
 /*** Return random number between 0.0 and 1.0 ***/
 double drnd()
 {
