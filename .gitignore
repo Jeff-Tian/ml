@@ -15,3 +15,5 @@ yarn-error.log
 **/*.o
 facetrain
 .exe
+
+build
