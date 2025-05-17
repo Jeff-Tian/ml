@@ -2,18 +2,32 @@
 
 exports[`tests for resource 4.11 tree should return one file when one file 1`] = `
 <div>
-  <ul>
-    <ul>
-      <li>
-        <a
-          href="/dir1/file1.md"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          dir1/file1.md
-        </a>
-      </li>
-    </ul>
-  </ul>
+  <details
+    style="padding-left: 20px;"
+  >
+    <summary>
+      目录：
+      dir1
+    </summary>
+    <dd
+      style="padding-left: 60px;"
+    >
+      <a
+        href="/dir1/file1.md"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        file1
+      </a>
+      <br />
+      <a
+        href="/dir1/file1.md"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        dir1/file1.md
+      </a>
+    </dd>
+  </details>
 </div>
 `;

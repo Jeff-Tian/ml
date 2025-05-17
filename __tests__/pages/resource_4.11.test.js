@@ -135,7 +135,6 @@ describe('tests for resource 4.11', () => {
             expect(result).toBeDefined();
 
             const ul = result;
-            expect(ul.type).toBe('ul');
             expect(ul.props.children.length).toBe(0);
         })
     })

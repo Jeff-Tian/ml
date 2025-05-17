@@ -8,18 +8,23 @@ export const Head = () => <Seo title="《机器学习》第 4 章 4.11 题目资
 
 
 export const NestedTree = ({groupedFiles, level}) => {
-    return <ul key={'ul-' + level}>
+    return <>
         {Object.keys(groupedFiles).map((key) => {
             const file = groupedFiles[key]
             if (file.relativePath) {
-                return <li key={file.relativePath}>
+                return <dd key={file.relativePath} style={{paddingLeft: 20 * (level + 1) + 'px'}}>
+                    <a href={file.publicURL} target="_blank" rel="noopener noreferrer">{file.name}</a>
+                    <br/>
                     <a href={file.publicURL} target="_blank" rel="noopener noreferrer">{file.relativePath}</a>
-                </li>
+                </dd>
             }
 
-            return <NestedTree groupedFiles={file}/>
+            return <details style={{paddingLeft: 20 * level + 'px'}} key={'detail-' + key}>
+                <summary>目录：{key}</summary>
+                <NestedTree groupedFiles={file} level={level + 1}/>
+            </details>
         })}
-    < /ul>
+    </>
 };
 
 export const Tree = ({data, level = 1}) => {
