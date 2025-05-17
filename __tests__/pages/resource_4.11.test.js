@@ -158,7 +158,7 @@ describe('tests for resource 4.11', () => {
             const a = li.props.children;
             expect(a.type).toBe('a');
             expect(a.props.href).toBe('/dir1/test.txt');
-            expect(a.props.children).toBe('test.txt');
+            expect(a.props.children).toBe('dir1/test.txt');
             expect(a.props.target).toBe('_blank');
             expect(a.props.rel).toBe('noopener noreferrer');
             const fileDiv2 = result.props.children[1];
@@ -174,7 +174,7 @@ describe('tests for resource 4.11', () => {
             const a2 = li2.props.children;
             expect(a2.type).toBe('a');
             expect(a2.props.href).toBe('/dir2/test2.txt');
-            expect(a2.props.children).toBe('test2.txt');
+            expect(a2.props.children).toBe('dir2/test2.txt');
             expect(a2.props.target).toBe('_blank');
             expect(a2.props.rel).toBe('noopener noreferrer');
         })

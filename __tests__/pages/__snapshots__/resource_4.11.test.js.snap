@@ -14,7 +14,7 @@ exports[`tests for resource 4.11 tree should return one file when one file 1`] =
             rel="noopener noreferrer"
             target="_blank"
           >
-            File 1
+            dir1/file1.md
           </a>
         </li>
       </ul>
