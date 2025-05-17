@@ -2,23 +2,18 @@
 
 exports[`tests for resource 4.11 tree should return one file when one file 1`] = `
 <div>
-  <div>
-    <div>
-      <h2>
-        dir1
-      </h2>
-      <ul>
-        <li>
-          <a
-            href="/dir1/file1.md"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            dir1/file1.md
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <ul>
+    <ul>
+      <li>
+        <a
+          href="/dir1/file1.md"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          dir1/file1.md
+        </a>
+      </li>
+    </ul>
+  </ul>
 </div>
 `;

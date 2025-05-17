@@ -14,6 +14,12 @@ vcpkg install fmt
 conda install -c conda-forge fmt
 ```
 
+不过，由于已经添加了 vcpkg.json 文件，使用 vcpkg 安装时需要在项目根目录下运行：
+
+```shell
+vcpkg install --triplet x64-windows
+```
+
 
 ## 运行测试
 
