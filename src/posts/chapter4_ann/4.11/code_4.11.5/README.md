@@ -35,6 +35,15 @@ vcpkg install --triplet x64-windows
 如果报错，可以尝试：
 
 ```
+rm -rf build
 cmake -G "Unix Makefiles" -S . -B build
+cmake --build build
+```
+
+如果是在 Windows 上，则：
+
+```cmd
+rd /s /q build
+cmake -G "Visual Studio 17 2022" -S . -B build -DCMAKE_TOOLCHAIN_FILE=C:/Users/JeffT/vcpkg/scripts/buildsystems/vcpkg.cmake
 cmake --build build
 ```
