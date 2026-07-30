@@ -15,7 +15,7 @@ site:
   #   favicon: favicon.ico
   #   logo: site_logo.png
   domains:
-    - username.curve.space
+    - brickverse.curve.space
   static:
     - path: static
       url: /
